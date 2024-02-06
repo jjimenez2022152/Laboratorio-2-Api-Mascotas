@@ -1,0 +1,12 @@
+{
+  "name": "api_vespertina",
+  "version": "1.0.0",
+  "description": "Primera API IN6BM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jose Jiménez",
+  "license": "ISC"
+}
