@@ -1,8 +1,5 @@
-const bcryptjs = require('bcryptjs');
 const Animales = require('../models/animales');
 const { response } = require('express');
-const animales = require('../models/animales');
-
 
 const animalesGet = async (req, res = response) => {
     const { limite, desde } = req.query;
@@ -10,7 +7,7 @@ const animalesGet = async (req, res = response) => {
 
     const [total, animales] = await Promise.all([
         Animales.countDocumments(query),
-        Animales..find(query)
+        Animales.find(query)
         .skip(Number(desde))
         .limit(Number(limite))
     ]);
@@ -30,13 +27,44 @@ const getAnimalesById = async (req, res) => {
     });
 }
 
-const putAnimales = async (req, res = response) => {
-    const { id } = req.params;
-    const {_id, password, google, correo, ...resto}
-}
+
 
 const animalesPost = async (req, res) => {
+    console.log("aaaaaaaaaaa")
     const {nombre, especie, peso, altura} = req.body;
+    const animales = new Animales({nombre, especie, peso, altura});
 
-    const animales
+    await animales.save();
+    res.status(200).json({
+        animales
+    });
+}
+
+const animalesDelete = async (req, res) => {
+    const { id } = req.params;
+    const animales = await Animales.findByIdAndUpdate(id, {estado: false});
+
+    res.status(200).json({
+        animales
+    });
+}
+
+const animalesPut =  async (req, res = response) => {
+    const { id } = req.params;
+    const { _id , ...resto} = req.body;
+
+    const animales = await Animales.findByIdAndUpdate(id, resto);
+
+    res.status(200).json({
+        msg: 'Animal actualizado',
+        animales
+    })
+}
+
+
+module.exports = {
+    animalesPost,
+    animalesDelete,
+    getAnimalesById,
+    animalesPut
 }

@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "animalesColection",
+    "dateExported": "2024-02-07T23:28:54.288Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "93b73733-3f24-4956-82c4-3d675fefdf75",
+            "colId": "943296fa-4fcd-4c8f-89b7-c310329d7c3a",
+            "containerId": "",
+            "name": "post animales",
+            "url": "http://localhost:3000/api/animales",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-07T21:54:32.145Z",
+            "modified": "2024-02-07T22:51:42.314Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombre\": \"Dasha\",\n    \"especie\": \"Chango\",\n    \"peso\": \"20lb\",\n    \"altura\": \"40cm\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "aea0cdfb-09ef-4710-af45-8bfa3b98acf3",
+            "colId": "943296fa-4fcd-4c8f-89b7-c310329d7c3a",
+            "containerId": "",
+            "name": "delete animales",
+            "url": "http://localhost:3000/api/animales/65c4087b6b702c9d6131c50c",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-02-07T22:57:49.513Z",
+            "modified": "2024-02-07T23:05:44.211Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "471ad0a9-8cc9-42df-9221-adfe240a8e6d",
+            "colId": "943296fa-4fcd-4c8f-89b7-c310329d7c3a",
+            "containerId": "",
+            "name": "get animalesById",
+            "url": "http://localhost:3000/api/animales/65c40923e53defa797271ac1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-07T23:16:45.945Z",
+            "modified": "2024-02-07T23:17:22.732Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a2bb8814-7ed9-4607-b93c-0cff20d53ec7",
+            "colId": "943296fa-4fcd-4c8f-89b7-c310329d7c3a",
+            "containerId": "",
+            "name": "put animales",
+            "url": "http://localhost:3000/api/animales/65c40923e53defa797271ac1",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-07T23:23:24.587Z",
+            "modified": "2024-02-07T23:25:23.284Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Cesar Jimenez\",\n  \"especie\": \"Avestruz\",\n  \"peso\": \"100 lb\",\n  \"altura\": \"1.20m\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

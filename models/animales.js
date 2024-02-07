@@ -1,6 +1,6 @@
 const {Schema, model} = require('mongoose');
 
-const UsuarioSchema = Schema({
+const AnimalesSchema = Schema({
     nombre:{
         type: String,
         require: [true, 'El nombre debe de ser obligatorio']
@@ -18,26 +18,8 @@ const UsuarioSchema = Schema({
         type: String,
         require: [true, 'la altura es obligatoria']
     },
-    password:{
-        type: String,
-        require: [true, 'la clave es obligatoria']
-    },
-    img:{
-        type: String
-    },
-    role:{
-        type: String,
-        require: [true],
-        enum: ["ADMIN_ROLE", "USER_ROLE"]
-    },
-    estado:{
-        type: Boolean,
-        default: true
-    },
-    google:{
-        type: Boolean,
-        default: false
-    }
-
-
+   
+    
 });
+
+module.exports = model('Animales', AnimalesSchema);
