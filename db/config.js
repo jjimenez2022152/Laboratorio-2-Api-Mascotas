@@ -1,5 +1,4 @@
-const { default: mongoose } = require('mongoose');
-const moongose = require('mongoose');
+const mongoose  = require('mongoose');
 
 const dbConnection = async () => {
     try {

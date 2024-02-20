@@ -2,11 +2,11 @@ const Animales = require('../models/animales');
 const { response } = require('express');
 
 const animalesGet = async (req, res = response) => {
-    const { limite, desde } = req.query;
-    const query = { estado: true };
+    const {limite, desde} = req.query;
+    const query = {estado: true};
 
     const [total, animales] = await Promise.all([
-        Animales.countDocumments(query),
+        Animales.countDocuments(query),
         Animales.find(query)
         .skip(Number(desde))
         .limit(Number(limite))
@@ -30,7 +30,7 @@ const getAnimalesById = async (req, res) => {
 
 
 const animalesPost = async (req, res) => {
-    console.log("aaaaaaaaaaa")
+    //console.log("aaaaaaaaaaa")
     const {nombre, especie, peso, altura} = req.body;
     const animales = new Animales({nombre, especie, peso, altura});
 
@@ -66,5 +66,6 @@ module.exports = {
     animalesPost,
     animalesDelete,
     getAnimalesById,
-    animalesPut
+    animalesPut,
+    animalesGet
 }

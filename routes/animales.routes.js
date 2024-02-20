@@ -5,22 +5,26 @@ const { existenteId } = require('../helpers/db-validators')
 
 const { validarCampos } = require('../middlewares/validar-campos');
 const {
+    animalesGet,
     animalesPost,
     animalesDelete,
     getAnimalesById,
-    animalesPut
+    animalesPut 
 
 } = require('../controllers/animales.controller');
 
 const router = Router();
+
+router.get("/", animalesGet)
+
 
 router.post(
     "/",
     [
         check("nombre", "Nombre no puede estar vacio").not().isEmpty(),
         check("especie", "Especie no puede estar vacia").not().isEmpty(),
-        // check("peso", "El peso no puede estar vacio").not().isEmpty,
-        //check("altura", "La altura no puede estar vacio").not().isEmpty,
+        check("peso", "El peso no puede estar vacio").not().isEmpty(),
+        check("altura", "La altura no puede estar vacio").not().isEmpty(),
         validarCampos
     ], animalesPost
 );

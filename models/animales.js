@@ -8,7 +8,6 @@ const AnimalesSchema = Schema({
     especie:{
         type: String,
         require: [true, 'la especie es obligatorio'],
-        unique: true
     },
     peso:{
         type: String,
@@ -18,8 +17,10 @@ const AnimalesSchema = Schema({
         type: String,
         require: [true, 'la altura es obligatoria']
     },
-   
-    
+    estado:{
+        type: Boolean,
+        default: true
+    },
 });
 
 module.exports = model('Animales', AnimalesSchema);
