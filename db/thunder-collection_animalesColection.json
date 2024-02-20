@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "animalesColection",
-    "dateExported": "2024-02-20T20:35:17.655Z",
+    "dateExported": "2024-02-20T21:24:40.151Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -14,12 +14,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-02-20T19:07:45.191Z",
-            "modified": "2024-02-20T20:31:58.024Z",
+            "modified": "2024-02-20T20:47:14.450Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n    \"nombre\": \"Fernando\",\n      \"especie\": \"Perra\",\n      \"peso\": \"80lb\",\n      \"altura\": \"16cm\"\n}",
+                "raw": "{\n    \"nombre\": \"BingoFlash\",\n      \"especie\": \"Perro_Salchicha\",\n      \"peso\": \"80lb\",\n      \"altura\": \"50cm\"\n}",
                 "form": []
             },
             "tests": []
@@ -29,11 +29,11 @@
             "colId": "4eca890b-a7a5-4d60-bd94-8a556055b066",
             "containerId": "",
             "name": "delete animales",
-            "url": "http://localhost:3000/api/animales/65d50c3d1ca543d72c23c9e1",
+            "url": "http://localhost:3000/api/animales/65d50f550102c98e7fc501b9",
             "method": "DELETE",
             "sortNum": 30000,
             "created": "2024-02-20T19:07:45.192Z",
-            "modified": "2024-02-20T20:34:25.045Z",
+            "modified": "2024-02-20T20:45:57.832Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -43,11 +43,11 @@
             "colId": "4eca890b-a7a5-4d60-bd94-8a556055b066",
             "containerId": "",
             "name": "get animalesById",
-            "url": "http://localhost:3000/api/animales/65d50c3d1ca543d72c23c9e1",
+            "url": "http://localhost:3000/api/animales/65d50fd20102c98e7fc501c7",
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-02-20T19:07:45.193Z",
-            "modified": "2024-02-20T20:33:30.035Z",
+            "modified": "2024-02-20T20:50:09.846Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -57,16 +57,16 @@
             "colId": "4eca890b-a7a5-4d60-bd94-8a556055b066",
             "containerId": "",
             "name": "put animales",
-            "url": "http://localhost:3000/api/animales/65d50c3d1ca543d72c23c9e1",
+            "url": "http://localhost:3000/api/animales/65d50fd20102c98e7fc501c7",
             "method": "PUT",
             "sortNum": 50000,
             "created": "2024-02-20T19:07:45.194Z",
-            "modified": "2024-02-20T20:33:45.484Z",
+            "modified": "2024-02-20T20:50:15.045Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nombre\": \"Cesar Jimenez 2\"\n}",
+                "raw": "{\n  \"nombre\": \"BingoFlash B)\",\n  \"especie\": \"Perro_Salchicha\",\n  \"peso\": \"60lb\",\n  \"altura\": \"50cm\"\n}",
                 "form": []
             },
             "tests": []
